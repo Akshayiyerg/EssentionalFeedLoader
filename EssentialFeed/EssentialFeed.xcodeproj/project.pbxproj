@@ -17,6 +17,7 @@
 		BA9EB2402A47866B00E5233E /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB23F2A47866B00E5233E /* RemoteFeedLoader.swift */; };
 		BA9EB2422A4786B700E5233E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB2412A4786B700E5233E /* HTTPClient.swift */; };
 		BA9EB2442A47874800E5233E /* FeedMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB2432A47874800E5233E /* FeedMapper.swift */; };
+		BA9EB2462A47878A00E5233E /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB2452A47878A00E5233E /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		BA9EB23F2A47866B00E5233E /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		BA9EB2412A4786B700E5233E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		BA9EB2432A47874800E5233E /* FeedMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMapper.swift; sourceTree = "<group>"; };
+		BA9EB2452A47878A00E5233E /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				BA9EB23F2A47866B00E5233E /* RemoteFeedLoader.swift */,
 				BA9EB2412A4786B700E5233E /* HTTPClient.swift */,
 				BA9EB2432A47874800E5233E /* FeedMapper.swift */,
+				BA9EB2452A47878A00E5233E /* URLSessionHTTPClient.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9EB2462A47878A00E5233E /* URLSessionHTTPClient.swift in Sources */,
 				BA9EB2402A47866B00E5233E /* RemoteFeedLoader.swift in Sources */,
 				BA9EB2422A4786B700E5233E /* HTTPClient.swift in Sources */,
 				BA9EB2442A47874800E5233E /* FeedMapper.swift in Sources */,
