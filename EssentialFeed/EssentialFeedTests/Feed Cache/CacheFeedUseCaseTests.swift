@@ -146,7 +146,7 @@ class CacheFeedUseCaseTests: XCTestCase {
         
         enum ReceivedMessage: Equatable {
             case deleteCachedFeed
-            case Insert([LocalFeedItem], Date)
+            case Insert([LocalFeedImage], Date)
         }
         
         private(set) var receivedMessages = [ReceivedMessage]()
@@ -167,7 +167,7 @@ class CacheFeedUseCaseTests: XCTestCase {
             deletionCompletion[index](nil)
         }
         
-        func insert(_ items: [LocalFeedItem], timeStamp: Date, completion: @escaping insertionCompletionTypealias) {
+        func insert(_ items: [LocalFeedImage], timeStamp: Date, completion: @escaping insertionCompletionTypealias) {
             insertionCompletion.append(completion)
             receivedMessages.append(.Insert(items, timeStamp))
         }
@@ -182,13 +182,13 @@ class CacheFeedUseCaseTests: XCTestCase {
     }
 
     
-    private func uniqueItem() -> FeedItem {
-        return FeedItem(id: UUID(), description: "any", location: "any", imageURL: anyURL())
+    private func uniqueItem() -> FeedImage {
+        return FeedImage(id: UUID(), description: "any", location: "any", url: anyURL())
     }
     
-    private func uniqueItems() -> (modelItems: [FeedItem], localItems: [LocalFeedItem]) {
+    private func uniqueItems() -> (modelItems: [FeedImage], localItems: [LocalFeedImage]) {
         let items = [uniqueItem(), uniqueItem()]
-        let localItems = items.map { LocalFeedItem(id: $0.id, description: $0.description, location: $0.location, imageURL: $0.imageURL) }
+        let localItems = items.map { LocalFeedImage(id: $0.id, description: $0.description, location: $0.location, url: $0.url) }
         return (items, localItems)
     }
     
