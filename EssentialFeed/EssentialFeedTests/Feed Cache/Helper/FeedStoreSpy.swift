@@ -35,9 +35,9 @@ class FeedStoreSpy: FeedStore {
         deletionCompletion[index](nil)
     }
     
-    func insert(_ feed: [LocalFeedImage], timeStamp: Date, completion: @escaping insertionCompletionTypealias) {
+    func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping insertionCompletionTypealias) {
         insertionCompletion.append(completion)
-        receivedMessages.append(.Insert(feed, timeStamp))
+        receivedMessages.append(.Insert(feed, timestamp))
     }
     
     func completeInsertion(with error: NSError, at index: Int = 0) {
@@ -54,10 +54,14 @@ class FeedStoreSpy: FeedStore {
     }
     
     func completeRetrieval(with error: NSError, at index: Int = 0) {
-        retrievalCompletion[index](error)
+        retrievalCompletion[index](.failure(error))
     }
     
     func completeRetrievalWithEmptyCache(at index: Int = 0) {
-        retrievalCompletion[index](nil)
+        retrievalCompletion[index](.empty)
+    }
+    
+    func completeRetrieval(with feed: [LocalFeedImage], timestamp: Date, at index: Int = 0) {
+        retrievalCompletion[index](.found(feed: feed, timestamp: timestamp))
     }
 }
