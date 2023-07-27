@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA0993642A58927C001C9039 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB2492A47882300E5233E /* XCTestCase+MemoryLeakTracking.swift */; };
+		BA578C512A7304B900137674 /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA578C502A7304B900137674 /* LoadFeedFromCacheUseCaseTests.swift */; };
 		BA65D12E2A71CB5F001CA81A /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65D12D2A71CB5F001CA81A /* LocalFeedLoader.swift */; };
 		BA65D1302A71CC59001CA81A /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65D12F2A71CC59001CA81A /* FeedStore.swift */; };
 		BA65D1322A71E650001CA81A /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65D1312A71E650001CA81A /* RemoteFeedItem.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		BA391E8E2A58937100107123 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
+		BA578C502A7304B900137674 /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		BA65D12D2A71CB5F001CA81A /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		BA65D12F2A71CC59001CA81A /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		BA65D1312A71E650001CA81A /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				BA86667E2A6B448300BBC298 /* CacheFeedUseCaseTests.swift */,
+				BA578C502A7304B900137674 /* LoadFeedFromCacheUseCaseTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				BA9EB22C2A47835200E5233E /* EssentialFeedTests.swift in Sources */,
 				BA9EB24A2A47882300E5233E /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				BA86667F2A6B448300BBC298 /* CacheFeedUseCaseTests.swift in Sources */,
+				BA578C512A7304B900137674 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				BA9EB24C2A4788A900E5233E /* URLSessionHTTPClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
