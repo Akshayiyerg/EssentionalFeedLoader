@@ -30,6 +30,7 @@
 		BA9EB24C2A4788A900E5233E /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB24B2A4788A900E5233E /* URLSessionHTTPClientTests.swift */; };
 		BA9EB2552A4789C400E5233E /* EssentialFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB2542A4789C400E5233E /* EssentialFeedAPIEndToEndTests.swift */; };
 		BA9EB2562A4789C400E5233E /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9EB21C2A47835200E5233E /* EssentialFeed.framework */; };
+		BAB161A62A75A8CB00D423B4 /* ValidateFeedCacheUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB161A52A75A8CB00D423B4 /* ValidateFeedCacheUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		BA9EB24D2A47892E00E5233E /* EssentialFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeed.xctestplan; sourceTree = "<group>"; };
 		BA9EB2522A4789C400E5233E /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9EB2542A4789C400E5233E /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
+		BAB161A52A75A8CB00D423B4 /* ValidateFeedCacheUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedCacheUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				BA578C522A7306F600137674 /* Helper */,
 				BA86667E2A6B448300BBC298 /* CacheFeedUseCaseTests.swift */,
 				BA578C502A7304B900137674 /* LoadFeedFromCacheUseCaseTests.swift */,
+				BAB161A52A75A8CB00D423B4 /* ValidateFeedCacheUseCase.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				BA9EB22C2A47835200E5233E /* EssentialFeedTests.swift in Sources */,
 				BA9EB24A2A47882300E5233E /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				BA86667F2A6B448300BBC298 /* CacheFeedUseCaseTests.swift in Sources */,
+				BAB161A62A75A8CB00D423B4 /* ValidateFeedCacheUseCase.swift in Sources */,
 				BA578C542A73071800137674 /* FeedStoreSpy.swift in Sources */,
 				BA578C512A7304B900137674 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				BA9EB24C2A4788A900E5233E /* URLSessionHTTPClientTests.swift in Sources */,
