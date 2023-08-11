@@ -139,6 +139,22 @@ final class CodableFeedStoreTests: XCTestCase {
         expect(sut, toRetrieveTwice: .failure(anyNSError()))
     }
     
+    func test_insert_previouslyInsertedCacheValues() {
+        
+        let sut = makeSUT()
+        
+        let firstInsertionError = insert((uniqueImageFeed().localItems, Date()), to: sut)
+        XCTAssertNil(firstInsertionError, "Expected insertion cache to be successful")
+        
+        let latestFeed = uniqueImageFeed().localItems
+        let latestTimeStamp = Date()
+        let latestInsertionError = insert((latestFeed, latestTimeStamp), to: sut)
+        
+        XCTAssertNil(latestInsertionError, "Expected overide cache to be successful")
+        
+        expect(sut, toRetrieve: .found(feed: latestFeed, timestamp: latestTimeStamp))
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(storeURL: URL? = nil, file: StaticString = #file, line: UInt = #line) -> CodableFeedStore {
@@ -147,14 +163,16 @@ final class CodableFeedStoreTests: XCTestCase {
         return sut
     }
     
-    private func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: CodableFeedStore) {
-        
+    @discardableResult
+    private func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: CodableFeedStore) -> Error? {
         let exp = expectation(description: "Wait for the cache insertion")
-        sut.insert(cache.feed, timestamp: cache.timestamp) { insertionError in
-            XCTAssertNil(insertionError, "Expected insertion Successfull")
+        var insertionError: Error?
+        sut.insert(cache.feed, timestamp: cache.timestamp) { receivedInsertionError in
+            insertionError = receivedInsertionError
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1.0)
+        return insertionError
     }
     
     private func expect(_ sut: CodableFeedStore, toRetrieve expectedResult: RetrievalCachedFeedResult, file: StaticString = #file, line: UInt = #line) {
