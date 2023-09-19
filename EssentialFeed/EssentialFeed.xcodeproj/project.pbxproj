@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA09418A2ABA1EC500DE978D /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0941892ABA1EC500DE978D /* ManagedCache.swift */; };
+		BA09418C2ABA1F1200DE978D /* ManagedFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA09418B2ABA1F1200DE978D /* ManagedFeedImage.swift */; };
 		BA0993642A58927C001C9039 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB2492A47882300E5233E /* XCTestCase+MemoryLeakTracking.swift */; };
+		BA0AC3262ABA1C3D00AC6BAF /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0AC3252ABA1C3D00AC6BAF /* CoreDataHelpers.swift */; };
 		BA16B7672A7B00A5006C9F3E /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA16B7662A7B00A5006C9F3E /* FeedCachePolicy.swift */; };
 		BA16B76B2A7C49DA006C9F3E /* CodableFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA16B76A2A7C49DA006C9F3E /* CodableFeedStoreTests.swift */; };
 		BA1F0A382A8832C100258571 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F0A372A8832C100258571 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */; };
@@ -64,6 +67,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA0941892ABA1EC500DE978D /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
+		BA09418B2ABA1F1200DE978D /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
+		BA0AC3252ABA1C3D00AC6BAF /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		BA16B7662A7B00A5006C9F3E /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		BA16B76A2A7C49DA006C9F3E /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
 		BA1F0A372A8832C100258571 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableInsertFeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 				BA882ACE2A86F011005AB320 /* CodableFeedStore.swift */,
 				BA7CB8652A9152DB00BB831B /* CoreDataFeedStore.swift */,
 				BA7CB8672A91568100BB831B /* FeedStore.xcdatamodeld */,
+				BA0AC3252ABA1C3D00AC6BAF /* CoreDataHelpers.swift */,
+				BA0941892ABA1EC500DE978D /* ManagedCache.swift */,
+				BA09418B2ABA1F1200DE978D /* ManagedFeedImage.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -359,7 +368,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					BA9EB21B2A47835200E5233E = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -427,13 +436,16 @@
 				BA9EB2462A47878A00E5233E /* URLSessionHTTPClient.swift in Sources */,
 				BA9EB2402A47866B00E5233E /* RemoteFeedLoader.swift in Sources */,
 				BA9EB2422A4786B700E5233E /* HTTPClient.swift in Sources */,
+				BA0AC3262ABA1C3D00AC6BAF /* CoreDataHelpers.swift in Sources */,
 				BA9EB2442A47874800E5233E /* FeedMapper.swift in Sources */,
 				BA7CB8662A9152DB00BB831B /* CoreDataFeedStore.swift in Sources */,
+				BA09418A2ABA1EC500DE978D /* ManagedCache.swift in Sources */,
 				BA9EB2392A4784B500E5233E /* FeedLoader.swift in Sources */,
 				BA65D1322A71E650001CA81A /* RemoteFeedItem.swift in Sources */,
 				BA882ACF2A86F011005AB320 /* CodableFeedStore.swift in Sources */,
 				BA16B7672A7B00A5006C9F3E /* FeedCachePolicy.swift in Sources */,
 				BA9EB2372A47842E00E5233E /* FeedImage.swift in Sources */,
+				BA09418C2ABA1F1200DE978D /* ManagedFeedImage.swift in Sources */,
 				BA65D12E2A71CB5F001CA81A /* LocalFeedLoader.swift in Sources */,
 				BA9EB2212A47835200E5233E /* EssentialFeed.docc in Sources */,
 			);
@@ -522,9 +534,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -585,9 +599,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -610,9 +626,11 @@
 		BA9EB2312A47835200E5233E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M99Q25KN7N;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -641,9 +659,11 @@
 		BA9EB2322A47835200E5233E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M99Q25KN7N;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -675,6 +695,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = M99Q25KN7N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -691,6 +712,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = M99Q25KN7N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -706,6 +728,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = M99Q25KN7N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -721,6 +744,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = M99Q25KN7N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
