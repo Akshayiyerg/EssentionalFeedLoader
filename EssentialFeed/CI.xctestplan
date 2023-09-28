@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "1D5EF06A-6139-4A5E-AD4F-6DE7AA6440EC",
+      "id" : "8261696A-1207-475B-AC4B-665C3F69813B",
       "name" : "Test Scheme Action",
       "options" : {
 
@@ -17,9 +17,17 @@
           "name" : "EssentialFeed"
         }
       ]
-    }
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:EssentialFeed.xcodeproj",
+        "identifier" : "BA976A3C2ABA3E600066A1A7",
+        "name" : "EssentialCacheFeedIntegrationTests"
+      }
+    },
     {
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
