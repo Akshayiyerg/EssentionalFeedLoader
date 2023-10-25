@@ -54,6 +54,7 @@
 		BACC03352A882DE200CBB277 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC03342A882DE200CBB277 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */; };
 		BACC03382A8830F400CBB277 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC03372A8830F400CBB277 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
 		BAE79C122AE87B7E005B216A /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE79C112AE87B7E005B216A /* FeedViewControllerTests.swift */; };
+		BAE79C132AE8931F005B216A /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB2492A47882300E5233E /* XCTestCase+MemoryLeakTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -628,6 +629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE79C122AE87B7E005B216A /* FeedViewControllerTests.swift in Sources */,
+				BAE79C132AE8931F005B216A /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
