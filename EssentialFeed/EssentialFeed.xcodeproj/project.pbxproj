@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA086DA32B0D475000B66D99 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA086DA22B0D475000B66D99 /* FeedViewController.swift */; };
+		BA086DA52B0D6F4F00B66D99 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA086DA42B0D6F4F00B66D99 /* FeedImageCell.swift */; };
 		BA09418A2ABA1EC500DE978D /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0941892ABA1EC500DE978D /* ManagedCache.swift */; };
 		BA09418C2ABA1F1200DE978D /* ManagedFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA09418B2ABA1F1200DE978D /* ManagedFeedImage.swift */; };
 		BA0993642A58927C001C9039 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB2492A47882300E5233E /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -91,6 +92,7 @@
 
 /* Begin PBXFileReference section */
 		BA086DA22B0D475000B66D99 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		BA086DA42B0D6F4F00B66D99 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		BA0941892ABA1EC500DE978D /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
 		BA09418B2ABA1F1200DE978D /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
 		BA0AC3252ABA1C3D00AC6BAF /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				BA086DA22B0D475000B66D99 /* FeedViewController.swift */,
+				BA086DA42B0D6F4F00B66D99 /* FeedImageCell.swift */,
 			);
 			path = EssentailFeediOS;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA086DA32B0D475000B66D99 /* FeedViewController.swift in Sources */,
+				BA086DA52B0D6F4F00B66D99 /* FeedImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
