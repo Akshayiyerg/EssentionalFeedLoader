@@ -57,6 +57,7 @@
 		BACC03382A8830F400CBB277 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC03372A8830F400CBB277 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
 		BAE79C122AE87B7E005B216A /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE79C112AE87B7E005B216A /* FeedViewControllerTests.swift */; };
 		BAE79C132AE8931F005B216A /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EB2492A47882300E5233E /* XCTestCase+MemoryLeakTracking.swift */; };
+		BAF6AC0D2B48DB3700004A0B /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6AC0C2B48DB3700004A0B /* UIView+Shimmering.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		BACC03362A88303000CBB277 /* EssentialFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeed.xctestplan; sourceTree = "<group>"; };
 		BACC03372A8830F400CBB277 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		BAE79C112AE87B7E005B216A /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
+		BAF6AC0C2B48DB3700004A0B /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			children = (
 				BA086DA22B0D475000B66D99 /* FeedViewController.swift */,
 				BA086DA42B0D6F4F00B66D99 /* FeedImageCell.swift */,
+				BAF6AC0C2B48DB3700004A0B /* UIView+Shimmering.swift */,
 			);
 			path = EssentailFeediOS;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF6AC0D2B48DB3700004A0B /* UIView+Shimmering.swift in Sources */,
 				BA086DA32B0D475000B66D99 /* FeedViewController.swift in Sources */,
 				BA086DA52B0D6F4F00B66D99 /* FeedImageCell.swift in Sources */,
 			);
